@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LockWidget</class>
+ <widget class="QWidget" name="LockWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>535</width>
+    <height>314</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget" native="true">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <widget class="QSlider" name="slider">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>110</y>
+        <width>281</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="cursor">
+       <cursorShape>OpenHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSlider::handle:horizontal {
+    width: 40px;
+    height: 40px;
+    margin-top: -5px; /* 根据滑槽高度调整这个值 */
+    margin-left: -10px;
+    margin-bottom: -5px; /* 根据滑槽高度调整这个值 */
+    margin-right: 0px;
+    background: white; /* 白色滑块 */
+    border: 2px solid lightgray; /* 边框颜色 */
+    border-radius: 20px; /* 设置圆形 */
+}
+
+QSlider::groove:horizontal {
+    height: 35px;
+    left: 0px;
+    right: 0px;
+    border: 0px;
+    border-radius: 17px; /* 确保圆角 */
+    background: rgba(0, 0, 0, 50); /* 滑槽背景 */
+}
+
+QSlider::sub-page:horizontal {
+    border-radius: 17px; /* 确保与 groove 保持一致 */
+    background: rgb(64, 191, 191); /* 已经过的部分颜色 */
+}
+
+QSlider::add-page:horizontal {
+    border-radius: 17px; /* 也对未经过的部分设置圆角 */
+    background: transparent; /* 设置为透明或其他颜色 */
+}
+</string>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>40</y>
+        <width>351</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>当前窗口已锁定，请滑动解锁</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
